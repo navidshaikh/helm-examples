@@ -5,7 +5,7 @@ metadata:
   labels:
     {{- include "hello-world.labels" . | nindent 4 }}
 spec:
-  replicas: 3
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       {{- include "hello-world.selectorLabels" . | nindent 6 }}
